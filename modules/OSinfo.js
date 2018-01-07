@@ -15,7 +15,7 @@ function getOSinfo() {
 	var cpu = os.cpus()[0].model;
 	console.log('CPU model:', cpu);
 	var uptime = os.uptime();
-	console.log(timeformat(uptime));
+	console.log(time.print(uptime));
 	var userInfo = os.userInfo();
 	console.log('User name:', userInfo.username);
 	console.log('Home dir:', userInfo.homedir);
@@ -23,5 +23,3 @@ function getOSinfo() {
 
 
 exports.print = getOSinfo;
-
-time.print();
